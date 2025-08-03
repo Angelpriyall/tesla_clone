@@ -110,7 +110,10 @@ You can copy and paste this entire block into your `README.md`. GitHub will rend
 
 *Need help pushing this to GitHub or want a minimal LICENSE file? Let me know!*
 
-  
+## 📦 Installation
+
+```bash
+git clone https://github.com/angelpriyall/tesla_clone.git  
 
 
 
