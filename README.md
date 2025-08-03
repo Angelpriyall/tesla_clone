@@ -35,4 +35,4 @@ A responsive front-end replica of Tesla's official landing page, featuring:
 Clone the repo:
 
 ```bash
-git clone https://github.com/angelpriyall/tesla-clone
+git clone https://github.com/angelpriyall/tesla-clone.git
