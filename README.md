@@ -81,18 +81,19 @@ git clone https://github.com/angelpriyall/tesla_clone.git
 
 Open index.html in your browser to view the project locally.
 
-📌 Purpose
-markdown
-Copy code
+## 📌 Purpose
+
 This project was created for educational and portfolio purposes to showcase
 front-end development skills, including responsive layout design,
 component-based page structure, and UI cloning from a real-world brand (Tesla).
-🤝 Contributions
+## 🤝 Contributions
 
 ⭐ Feel free to fork, customize, or contribute to the project!
 
 
-##
+
+## 📦 let
+
 Let me know if you want to include a LICENSE, CONTRIBUTING.md, or preview.mp4 section.
 
 
