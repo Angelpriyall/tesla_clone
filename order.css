@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+.top-banner {
+  background-color: #e9c77d;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px;
+}
+
+.left-section {
+  flex: 1;
+  max-width: 60%;
+}
+
+.logo img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Swiper container */
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Slide image */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Swiper buttons inside image */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000;
+  background-color: rgba(220, 209, 209, 0.789);
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+
+/* Right Panel */
+.right-section {
+  flex: 1;
+  max-width: 35%;
+  padding-right: 20px;
+}
+
+.country-icon {
+  text-align: right;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.grok {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.grok a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 15px;
+  border: none;
+  background: #f1f1f1;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tabs button.active {
+  background: #000;
+  color: #fff;
+}
+
+.leasing-options {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+.option.active {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.details, .link {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.link a {
+  text-decoration: underline;
+}
+
+.checkbox {
+  margin-bottom: 20px;
+}
+
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.order-btn {
+  background-color: #12151e;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* Change Swiper pagination bullets to black */
+.swiper-pagination-bullet {
+  background: black !important;
+  opacity: 1;
+}
+
+/* Optional: active bullet darker or bolder */
+.swiper-pagination-bullet-active {
+  background: black !important;
+  transform: scale(1.2);
+}
+
+/* Change Swiper navigation arrows if used */
+.swiper-button-prev,
+.swiper-button-next {
+  color: black !important;
+}
+
+/* Optional: scrollbar customization if using scrollbar */
+.swiper-scrollbar-drag {
+  background-color: black !important;
+}
+

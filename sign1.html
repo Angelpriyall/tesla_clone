@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In | Tesla</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .tesla-logo img {
+      height: 20px;
+    }
+
+    .lang-selector {
+      font-size: 14px;
+      color: #000;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .lang-selector span {
+      font-size: 13px;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 16px;
+    }
+
+    .form-box {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #000;
+    }
+
+    .email-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: #000;
+    }
+
+    .email-row a {
+      font-size: 14px;
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .input-label {
+      font-size: 14px;
+      color: #000;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .password-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .password-wrapper input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+      font-size: 16px;
+    }
+
+    .toggle-eye {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .sign-in-button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #3e6ae1;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+
+    .sign-in-button:hover {
+      background-color: #3457c0;
+    }
+
+    .forgot-link {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 24px;
+      text-decoration: underline;
+      color: #000;
+    }
+
+    .or-divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #666;
+      margin: 24px 0;
+    }
+
+    .or-divider::before,
+    .or-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: #ddd;
+    }
+
+    .or-divider span {
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .create-button {
+      width: 100%;
+      padding: 12px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      color: #000;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .create-button:hover {
+      background-color: #eaeaea;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      padding: 20px 10px;
+    }
+
+    footer a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #555;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="tesla-logo">
+      <img src="logo.png" alt="Tesla Logo" />
+    </div>
+    <div class="lang-selector">
+      <span>&#127760;</span>
+      <span>en-IN</span>
+    </div>
+  </header>
+
+  <!-- Main Form Section -->
+  <div class="main-content">
+    <div class="form-box">
+      <h1>Sign In</h1>
+      <div class="email-row">
+        <span id="user-email">example@gmail.com</span>
+        <a href="sign.html">Change</a>
+      </div>
+
+      <label class="input-label" for="password">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="">
+        <span class="toggle-eye" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <button class="sign-in-button">Sign In</button>
+
+      <a href="#" class="forgot-link">Forgot password?</a>
+
+      <div class="or-divider"><span>Or</span></div>
+
+      <button class="create-button">Create Account</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Tesla © 2025
+    <a href="#">Privacy & Legal</a>
+    <a href="#">Contact</a>
+  </footer>
+
+  <!-- JS for dynamic email + password toggle -->
+  <script>
+    // Display email from query string
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get("email");
+    if (email) {
+      document.getElementById("user-email").textContent = email;
+    }
+
+    function togglePassword() {
+      const pwd = document.getElementById("password");
+      pwd.type = pwd.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>

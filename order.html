@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model 3 | tesla</title>
+  <link rel="stylesheet" href="order.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  <header class="top-banner">
+    Model 3 Performance: Free exterior and interior upgrades for a limited time
+  </header>
+
+  <div class="main-section">
+    <!-- Left: Swiper image slider -->
+    <div class="left-section">
+      <div class="logo">
+         <a href="index.html" class="tesla-logo">
+    <img src="logo.png" alt="Tesla Logo" />
+  </a>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- 10 Tesla car images -->
+          <div class="swiper-slide"><img src="images/o1.png" alt="Car 1"></div>
+          <div class="swiper-slide"><img src="images/o2.png" alt="Car 2"></div>
+          <div class="swiper-slide"><img src="images/o3.png" alt="Car 3"></div>
+          <div class="swiper-slide"><img src="images/o4.jpg" alt="Car 4"></div>
+          <div class="swiper-slide"><img src="images/o4.png" alt="Car 5"></div>
+          <div class="swiper-slide"><img src="images/o5.png" alt="Car 6"></div>
+          <div class="swiper-slide"><img src="images/o2.png" alt="Car 7"></div>
+          <div class="swiper-slide"><img src="images/o6.png" alt="Car 8"></div>
+          <div class="swiper-slide"><img src="images/o1.png" alt="Car 9"></div>
+          <div class="swiper-slide"><img src="images/o2.png" alt="Car 10"></div>
+        </div>
+
+        <!-- Swiper navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <!-- Right: Info panel -->
+    <div class="right-section">
+      <div class="country-icon">🌐 en</div>
+      <h1>Model 3</h1>
+      <p class="grok">⚡ Grok AI now available. <a href="modely.html">Learn more</a></p>
+
+      <div class="stats">
+        <div><strong>363</strong><br>Range (EPA est.)</div>
+        <div><strong>125</strong><br>Top Speed</div>
+        <div><strong>4.9</strong><br>0-60 mph</div>
+      </div>
+
+      <div class="tabs">
+        <button class="active">Cash</button>
+        <button class="active">Lease</button>
+        <button>Finance</button>
+      </div>
+
+      <div class="leasing-options">
+        <div class="option active">
+          <span>Long Range Rear-Wheel Drive</span>
+          <span>$299/mo</span>
+        </div>
+        <div class="option">Long Range All-Wheel Drive <span>$499/mo</span></div>
+        <div class="option">Performance All-Wheel Drive <span>$699/mo</span></div>
+      </div>
+
+      <p class="details">
+        $3,000 down, 24 mo, 10,000 miles <a href="#">Edit Leasing</a>
+      </p>
+
+      <p class="link"><a href="#">Get Prequalified</a></p>
+
+      <div class="checkbox">
+        <input type="checkbox" id="gas-savings">
+        <label for="gas-savings">Include est. gas savings of $83 /mo</label>
+      </div>
+
+      <div class="bottom-bar">
+        <span>$299/mo <small>Est. Lease</small></span>
+        <button class="order-btn">Order Now</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+</body>
+</html>
