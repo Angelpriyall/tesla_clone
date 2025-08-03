@@ -85,6 +85,10 @@ This project was created to showcase front-end development skills, including:
 - Open `index.html` in your web browser to view the project locally.
 
 ---
+## 📦 Installation
+
+```bash
+git clone https://github.com/angelpriyall/tesla_clone.git
 
 ## 🤝 Contributions
 
@@ -114,11 +118,3 @@ You can copy and paste this entire block into your `README.md`. GitHub will rend
 
 ```bash
 git clone https://github.com/angelpriyall/tesla_clone.git  
-
-
-
-
-
-
-
-
